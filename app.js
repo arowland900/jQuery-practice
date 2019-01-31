@@ -16,9 +16,11 @@ $(document).ready(function () {
     var newLink = $('<br><br><a id="zillowLink" href="http://www.zillow.com">Visit Zillow.com<a>');
     $('body').append(newLink);
     $('#zillowLink').attr("target", "_blank");
+    console.log($('#zillowLink').attr('href'))
 
     $('#homes tbody').on('click', 'button', function () {
         var row = $(this).closest('tr');
+        console.log(row)
         // Before we remove the row, save it's outerHTML
         removedHomes.push(row[0].outerHTML);
         row.fadeOut(500, function () {
